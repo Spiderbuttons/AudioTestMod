@@ -14,12 +14,16 @@
         <Title>AudioTestMod</Title>
         <Authors>Spiderbuttons</Authors>
         <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <OutputPath>bin\Debug</OutputPath>
     </PropertyGroup>
 
-
+    <PropertyGroup>
+        <PublicizeAll>true</PublicizeAll>
+    </PropertyGroup>
+    
     <ItemGroup>
         <PackageReference Include="Krafs.Publicizer" Version="2.2.1">
           <PrivateAssets>all</PrivateAssets>
@@ -27,16 +31,4 @@
         </PackageReference>
         <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.*" />
     </ItemGroup>
-
-    <PropertyGroup>
-        <PublicizeAll>true</PublicizeAll>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <PublicizerRuntimeStrategies>Unsafe;IgnoresAccessChecksTo</PublicizerRuntimeStrategies>
-    </PropertyGroup>
-    
-    <PropertyGroup>
-        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    </PropertyGroup>
 </Project>
